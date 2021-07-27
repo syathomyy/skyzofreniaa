@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+}
+header {
+    height: 70px;    
+    
+}
+header h1 {
+    display: inline-block;
+    float: left;
+    padding: 15px 24px;
+}
+header h1 a {
+    transition: .3s;
+}
+header h1 a:hover {
+    color: red;
+}
+header ul {
+    float: right;
+}
+header ul li {
+    padding: 24px;
+    display: inline-block;
+}
+header ul li a{
+    transition: .3s;
+
+}
+header ul li a:hover{
+    color: red;
+}
+header a {
+    text-decoration: none;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.container::after {
+    content: '';
+    display: block;
+    clear: both; 
+}
+.menu-mobile {
+    float: right;
+    display: none;
+    padding: 20px;
+}
+.menu-mobile:hover {
+    cursor: pointer;
+}
+#check {
+    display: none;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    width: 300px;
+    background-color: rgba(10, 11, 105, 0.9);
+    transition: .3s;
+    z-index: 9999;
+}
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.sidebar ul li {
+    padding: 24px;
+    transition: .3s;
+    transition-property: background-color;
+}
+.sidebar ul li:hover {
+    background-color: red;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+.banner {
+    background-image: url(images/fbima.jpg);
+    background-size: cover;
+    background-color: rgba(10, 12, 105, 0.616);
+    padding: 10px 0;
+    position: relative;
+    top: 0;
+}
+section {
+    padding: 25px 0;
+}
+.banner img {
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgb(212, 245, 29);
+    margin-bottom: 10px;
+}
+.banner h2, p, span {
+    padding: 8px;
+    color: white;
+}
+.banner-left {
+    padding: 24px;
+}
+.banner h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+section h3 {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+section h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: #ddd;
+    left: calc(50% - 60px) ;
+}
+section h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 40px;
+    height: 4px;
+    background-color: red;
+    left: calc(50% - 20px) ;
+}
+ #about p {
+    color: black;
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+#skills {
+    margin-top: 25px;
+    background-color: #f9f9f9;
+}
+#skills .bar {
+       height: 30px;
+       background-color: white;
+       margin: 5px 0 20px 0;
+       border: 1px solid #ddd;
+}
+.bar .nilai {
+    height: 14px;
+    background-color: red;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+}
+.nilai span {
+    color: #fff;
+}
+.html {
+    width: 80%;
+}
+.css {
+    width: 70%;
+}
+.js {
+    width: 80%;
+}
+.php {
+    width: 30%;
+}
+.col-4 {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.col-4 img {
+    width: 100%;
+}
+.col-4 a:hover img {
+    transform: scale(1.2);
+}
+.col-4 a {
+    text-decoration: none;
+}
+#contact {
+    background-color: #f9f9f9;
+   
+}
+.col-3 {
+    width: 33.33%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    padding: 50px 0;
+
+}
+.col-3 h4 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+#contact p {
+        color: black;
+}
+footer {
+    background-color: black;
+    padding: 30px 0;
+    text-align: center;
+}
+small {
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 768px){
+    .menu-mobile{
+        display: block;
+    }
+    header ul {
+        display: none;
+    }
+    .col-4 {
+        width: 50%;
+    }
+    .col-3 {
+        width: 100%;
+    }
+}
